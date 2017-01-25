@@ -6,3 +6,6 @@ Purpose: Checks the sha1 hash of a file against the writer/developers posted val
 
 ### [chkPrime.py] (https://github.com/DaveKT/Utilities/tree/master/CheckPrime)
 Purpose: Test large intergers for primality using the Rabin-Miller test
+
+### [rot13.py] (https://github.com/DaveKT/Utilities/tree/master/ROT13)
+Purpose: Takes a text file and outputs a ROT13 encrypted version of the file.
