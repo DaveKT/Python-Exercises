@@ -3,3 +3,6 @@ A collection of command line utilities written in python to aid mac administrati
 
 ### [chkfile.py] (https://github.com/DaveKT/Utilities/tree/master/CheckFile)
 Purpose: Checks the sha1 hash of a file against the writer/developers posted value
+
+### [chkPrime.py] (https://github.com/DaveKT/Utilities/tree/master/CheckPrime)
+Purpose: Test large intergers for primality using the Rabin-Miller test
