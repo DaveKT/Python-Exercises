@@ -1,6 +1,9 @@
+
+String output = "";
+
 void setup() {
   Serial.begin(9600);
-
+  
 }
 
 void loop() {
@@ -8,7 +11,10 @@ void loop() {
   int x = 1;
   while (true) {
     long randomnumber = random(20);
-    Serial.println(x + ", " + randomnumber);
+    output = x;
+    output = output + ",";
+    output = output + randomnumber;
+    Serial.println(output);
     x++;
     delay(500);
   }

@@ -1,17 +1,17 @@
-#!/usr/bin/python           # This is server.py file
+#!/usr/bin/python
 
-import socket               # Import socket module
+import socket
 
-s = socket.socket()         # Create a socket object
-host = "localhost" 			# Get local machine name
-port = 22778                # Reserve a port for your service.
-s.bind((host, port))        # Bind to the port
+s = socket.socket()         
+host = "localhost"
+port = 22778
+s.bind((host, port))
 
 print("Listening...")
+s.listen(5)
 
-s.listen(5)                 # Now wait for client connection.
 while True:
-   c, addr = s.accept()     # Establish connection with client.
+   c, addr = s.accept() 
    print 'Got connection from', addr
-   c.send('Thank you for connecting')
-   c.close()                # Close the connection
+   c.send('Connection Successful')
+   c.close()
