@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!//usr/local/bin/python3
 
 import sqlite3
 import matplotlib.pyplot as plt
@@ -27,7 +27,7 @@ def animate(i):
 	del xs[:]
 	del ys[:]
 
-plt.xkcd()
+#plt.xkcd()
 plt.title('')
 plt.ylabel("Temp")
 plt.xlabel("Time")
