@@ -1,10 +1,16 @@
 #!/usr/local/bin/python3
 
+# Author: David Kolet-Tassara
+
 import argparse
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(
+	description='''This application converts values from supported units to Smoots. \n 
+	Supported units include: \n
+	inches, feet, yards, miles, American football fields, meters, leagues, \n
+	astronomical units, light years, cubits, and hands.''')
 parser.add_argument("value", help="value to convert")
-parser.add_argument("units", help="in, inches, ft, feet")
+parser.add_argument("units", help="inches, feet, meters, etc. See list above for supported units.")
 
 args=parser.parse_args()
 
@@ -41,16 +47,16 @@ def convertCubit(x):
 def convertHand(x):
 	print(str((float(x)*4)/67)+" smoots")
 
-def convertKesselRun(x):
+def convertKesselRun(x): #12 Parsecs
 	print(str((float(x)*14578004300000000000)/67)+" smoots")
 
 #convertFathom(x):
+#convertKilometers(x):
 #convertNauticalMile(x):
 #convertChain(x):
 #convertRod(x):
 #convertLunarDistance(x):
 #convertParsec(x):
-#convertKesselRun(x):
 #convertPlanck(l):
 #convertFurlong(x):
 #convertHorse(x):
@@ -80,7 +86,8 @@ elif args.units in ("cubits"):
 	convertCubit(args.value)
 elif args.units in ("hand", "hands"):
 	convertHand(args.value)
-elif args.units in ("kesselrun", "kr", "solo", "solos", "hans"):
+elif args.units in ("kesselrun", "kr", "solo", "han"):
+	#despite rumors the record still stands
 	convertKesselRun(args.value)
 else:
 	print("Units not recognized")
