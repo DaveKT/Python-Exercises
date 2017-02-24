@@ -7,12 +7,16 @@ import argparse
 parser = argparse.ArgumentParser(
 	description='''This application converts values from supported units to Smoots. \n 
 	Supported units include: \n
-	inches, feet, yards, miles, American football fields, meters, leagues, \n
-	astronomical units, light years, cubits, and hands.''')
+	inches, feet, yards, miles, American football fields, meters, leagues, fathoms,\n
+	parsecs, astronomical units, light years, cubits, and hands.''')
 parser.add_argument("value", help="value to convert")
 parser.add_argument("units", help="inches, feet, meters, etc. See list above for supported units.")
 
 args=parser.parse_args()
+
+q=args.units
+q=q.replace(" ", "")
+q=q.lower()
 
 def convertInches(x):
 	print(str(float(x)/67)+" smoots")
@@ -50,44 +54,71 @@ def convertHand(x):
 def convertKesselRun(x): #12 Parsecs
 	print(str((float(x)*14578004300000000000)/67)+" smoots")
 
-#convertFathom(x):
-#convertKilometers(x):
-#convertNauticalMile(x):
+def convertParsec(x):
+	print(str((float(x)*1214833690000000000)/67)+" smoots")
+
+def convertPlanck(x):
+	print(str((float(x)*.000000000000000000000000000000000636310383)/67)+" smoots")
+
+def convertFathom(x):
+	print(str((float(x)*72)/67)+" smoots")
+
+def convertTowel(x): #the question
+	print(str((float(x)*2814)/67)+" smoots")
+
+def convertKilometers(x):
+	print(str((float(x)*39370.1)/67)+" smoots")
+
+def convertNauticalMile(x):
+	print(str((float(x)*72913.4)/67)+" smoots")
+
+
 #convertChain(x):
 #convertRod(x):
 #convertLunarDistance(x):
-#convertParsec(x):
-#convertPlanck(l):
 #convertFurlong(x):
 #convertHorse(x):
 #convertDoubleDeckerBus(x):
 #convertHumanHair(x):
 
 
-if args.units in ("in", "inches", "inch"):
+if q in ("in", "inches", "inch"):
 	convertInches(args.value)
-elif args.units in ("ft", "feet", "foot"):
+elif q in ("ft", "feet", "foot"):
 	convertFeet(args.value)
-elif args.units in ("meters", "m", "meter"):
+elif q in ("meters", "m", "meter"):
 	convertMeters(args.value)
-elif args.units in ("miles", "mi", "mile"):
+elif q in ("miles", "mi", "mile"):
 	convertMiles(args.value)
-elif args.units in ("leagues", "league"):
+elif q in ("leagues", "league"):
 	convertLeagues(args.value)
-elif args.units in ("yard", "yards", "yrd", "yrds"):
+elif q in ("yard", "yards", "yrd", "yrds"):
 	convertYards(args.value)
-elif args.units in ("footballfields", "ff"):
+elif q in ("footballfields", "ff", "americanfootballfields", "aff"):
 	convertFootballFields(args.value)
-elif args.units in ("au"):
+elif q in ("au", "astronomicalunits"):
 	convertAU(args.value)
-elif args.units in ("ly", "lightyears"):
+elif q in ("ly", "lightyears", "light-years"):
 	convertLightYear(args.value)
-elif args.units in ("cubits"):
+elif q in ("cubits", "cubit"):
 	convertCubit(args.value)
-elif args.units in ("hand", "hands"):
+elif q in ("hand", "hands"):
 	convertHand(args.value)
-elif args.units in ("kesselrun", "kr", "solo", "han"):
+elif q in ("kesselrun", "kr", "solo", "han"):
 	#despite rumors the record still stands
 	convertKesselRun(args.value)
+elif q in ("parsecs"):
+	convertParsec(args.value)
+elif q in ("pl", "planck"):
+	convertPlanck(args.value)
+elif q in ("fathom", "ftm"):
+	convertFathom(args.value)
+elif q in ("towel", "towels"):
+	#don't leave home without it!
+	convertTowel(args.value)
+elif q in ("kilometers", "kilometer", "km"):
+	convertKilometers(args.value)
+elif q in ("nauticalmiles", "nauticalmile", "nm", "seamile"):
+	convertNauticalMile(args.value)
 else:
 	print("Units not recognized")
