@@ -72,14 +72,20 @@ def convertKilometers(x):
 def convertNauticalMile(x):
 	print(str((float(x)*72913.4)/67)+" smoots")
 
+def convertChain(x):
+	print(str((float(x)*792)/67)+" smoots")
 
-#convertChain(x):
-#convertRod(x):
-#convertLunarDistance(x):
-#convertFurlong(x):
-#convertHorse(x):
-#convertDoubleDeckerBus(x):
-#convertHumanHair(x):
+def convertRod(x):
+	print(str((float(x)*198)/67)+" smoots")
+
+def convertFurlong(x):
+	print(str((float(x)*7920.02)/67)+" smoots")
+
+def convertHumanHair(x):
+	print(str((float(x)*0.003149606)/67)+" smoots")
+
+def convertLunarDistance(x):
+	print(str((float(x)*15136704000)/67)+" smoots")
 
 
 if q in ("in", "inches", "inch"):
@@ -120,5 +126,15 @@ elif q in ("kilometers", "kilometer", "km"):
 	convertKilometers(args.value)
 elif q in ("nauticalmiles", "nauticalmile", "nm", "seamile"):
 	convertNauticalMile(args.value)
+elif q in ("chain", "chains"):
+	convertChain(args.value)
+elif q in ("rod", "rods"):
+	convertRod(args.value)
+elif q in ("furlong", "furlongs"):
+	convertFurlong(args.value)
+elif q in ("humanhair", "hh"):
+	convertHumanHair(args.value)
+elif q in ("lunardistance", "averagelunardistance", "ld"):
+	convertLunarDistance(args.value)
 else:
 	print("Units not recognized")
