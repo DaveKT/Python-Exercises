@@ -4,11 +4,7 @@
 
 import argparse
 
-parser = argparse.ArgumentParser(
-	description='''This application converts values from supported units to Smoots. \n 
-	Supported units include: \n
-	inches, feet, yards, miles, American football fields, meters, leagues, fathoms,\n
-	parsecs, astronomical units, light years, cubits, and hands.''')
+parser = argparse.ArgumentParser()
 parser.add_argument("value", help="value to convert")
 parser.add_argument("units", help="inches, feet, meters, etc. See list above for supported units.")
 
