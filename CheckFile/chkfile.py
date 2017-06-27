@@ -1,6 +1,5 @@
 #Author: David Kolet-Tassara
 
-
 #!/usr/local/bin/python3
 
 import argparse
