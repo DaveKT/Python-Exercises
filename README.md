@@ -11,7 +11,10 @@ Purpose: Checks the sha1 hash of a file against the writer/developers posted val
 Purpose: Test large integers for primality using the Rabin-Miller test
 
 ### [rot13.py] (https://github.com/DaveKT/Utilities/tree/master/ROT13)
-Purpose: Takes a text file and outputs a ROT13 encrypted version of the file.
+Purpose: Takes a text file and outputs a ROT13 version of the file. NB ROT13 is not encryption.
+
+### [rotgui.py] (https://github.com/DaveKT/Utilities/tree/master/ROT13GUI)
+Purpose: Allows the user to type text and convert to a ROT13 version of the file. NB ROT13 is not encryption.
 
 ### [rps.py] (https://github.com/DaveKT/Python-Exercises/tree/master/RockPaperScissors)
 Purpose: Play Rochambeau (rock, paper, scissors) with the computer.
