@@ -26,6 +26,8 @@ class ROTWindow(QWidget):
         hbox.addWidget(rotateBtn)
 
         vbox = QVBoxLayout()
+        vbox.setContentsMargins(0, 0, 0, 0)
+        vbox.setSpacing(0)
         vbox.addWidget(self.text)
         vbox.addLayout(hbox)
 
