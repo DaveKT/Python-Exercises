@@ -10,6 +10,9 @@ Purpose: Checks the sha1 hash of a file against the writer/developers posted val
 ### [chkPrime.py] (https://github.com/DaveKT/Utilities/tree/master/CheckPrime)
 Purpose: Test large integers for primality using the Rabin-Miller test
 
+### [factorial.py] (https://github.com/DaveKT/Utilities/tree/master/Factorial)
+Purpose: Demonstrate recursion using a factorial function as an example.
+
 ### [rot13.py] (https://github.com/DaveKT/Utilities/tree/master/ROT13)
 Purpose: Takes a text file and outputs a ROT13 version of the file. NB ROT13 is not encryption.
 
