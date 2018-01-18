@@ -1,7 +1,7 @@
 # Python Exercises
 A collection of small programming exercises written in python to aid learning. Brief descriptions below. See folder for usage and details.
 
-###[dbgraph.py](https://github.com/DaveKT/Python-Exercises/tree/master/DBGraph)
+### [dbgraph.py](https://github.com/DaveKT/Python-Exercises/tree/master/DBGraph)
 Purpose: Queries a sqlite db and plots returned values in XKCD style using matplotlib
 
 ### [chkfile.py](https://github.com/DaveKT/Utilities/tree/master/CheckFile)
