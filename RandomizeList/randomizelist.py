@@ -1,6 +1,8 @@
+#!/usr/local/bin/python3
+
 import random
 from random import shuffle
-import console
+#import console #uncoment if in pythonista
 import pyRandomdotOrg
 
 rnd=pyRandomdotOrg.clientlib("RandomizeList", "phi.fibonacci@gmail.com")
@@ -8,7 +10,7 @@ randomInt = rnd.IntegerGenerator(1, 1000000000)
 
 
 a = []
-console.clear()
+# console.clear() #only used in pythonista
 
 #uncomment the line below to check randomInt value
 #print(randomInt)
@@ -24,6 +26,6 @@ while True:
 
     for item in a:
         print(item)
-    
+
     print()
     del a[:]
