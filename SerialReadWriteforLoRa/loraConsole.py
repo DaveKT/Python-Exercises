@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3
 
 import serial
 import sys
@@ -13,14 +13,16 @@ args = parser.parse_args()
 try:
 	ser = serial.Serial(args.interface, args.baud)
 except:
-	print "Failed to connect on {}, {}".format(args.interface, args.baud)
+	print("Failed to connect on {}, {}".format(args.interface, args.baud))
 	sys.exit()
 
 while True:
-    input = ""
-    input = ser.readline()
-    if input:
-        print input
+	input = ""
+	input = ser.readline()
+	if input:
+		print(input)
 
-    # TODO: add code to read from console and write to serial
-    # TODO: convert to python3
+
+
+
+	# TODO: add code to read from console and write to serial
