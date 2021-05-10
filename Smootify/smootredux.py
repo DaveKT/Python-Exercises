@@ -16,6 +16,7 @@ v = args.value
 
 cv = {'inches': 1,
 'in': 1,
+'m': 39.3701,
 'meters': 39.3701,
 'miles': 63360,
 'leagues': 218740,
